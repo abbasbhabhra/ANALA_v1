@@ -103,17 +103,15 @@ body {
 }
 
 /* Center-align the sections and adjust size */
-.hero, .services, .clients {
+.hero, .services, .clients, .about {
     text-align: center;
-    padding: 200px 0; /* Increase the padding to increase the height of these sections */
-    width: 100%; /* Increase the width to 100% */
+    padding: 10vh 0; /* Update the padding to 50vh for full-screen sections */
+    width: 100%;
+    min-height: 80vh; /* Ensure minimum height of 100vh for full-screen effect */
 }
 
 /* Contact Us Section */
 .about {
-    text-align: center;
-    padding: 40px 0;
-    width: 100%;
     background-size: cover;
     background-position: center;
 }
@@ -125,7 +123,7 @@ body {
 }
 
 /* Section Text */
-.hero-text, .services-text, clients-text, .about-text {
+.hero-text, .services-text, .clients-text, .about-text {
     font-size: 18px;
     margin-bottom: 40px;
     color: white; /* Set the font color to white */
@@ -163,19 +161,23 @@ body {
     display: block;
 }
 
-/* Footer Content */
-.footer-text {
-    text-align: left; /* Align "Made by" to the left */
-    font-size: 10px; /* Reduce the font size for "Made by" */
-    margin: 0; /* Add margin to separate footer content */
+/* Footer Text */
+.footer-text, .copyright {
+    font-size: 10px;
+    display: inline-block; /* Make them display on the same line */
 }
 
-/* Footer Text */
-.copyright {
-    text-align: right; /* Align "Copyright" to the right */
-    font-size: 10px; /* Reduce the font size for "Copyright" */
-    margin: 0;
+/* Footer Text Spacing */
+.footer-text {
+    text-align: left;
+	margin: 0;	/* Add some space between the texts */
 }
+
+.copyright {
+    text-align: right;
+	margin: 0;
+}
+
 
 /* Background Images for Sections */
 .hero {
@@ -205,4 +207,30 @@ body {
 /* Change the link color for About & Contact sections */
 .about a, .about a:hover, .contact a, .contact a:hover {
     color: var(--link-color);
+}
+
+/* Style for full-screen sections */
+.full-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: scroll;
+}
+
+/* Style for full-screen section content */
+.full-screen .inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Additional styling for full-screen sections, adjust as needed */
+.full-screen .hero-title {
+    font-size: 48px;
 }
