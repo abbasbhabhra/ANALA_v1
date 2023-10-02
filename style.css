@@ -205,10 +205,11 @@ body {
     background-position: center;
 }
 
-/* Change the link color for About & Contact sections */
-.about a, .about a:hover, .contact a, .contact a:hover {
+/* Change the link color for About, Contact, and Footer sections */
+.about a, .about a:hover, .contact a, .contact a:hover, #footer a, #footer a:hover {
     color: var(--link-color);
 }
+
 
 /* Style for full-screen sections */
 .full-screen {
