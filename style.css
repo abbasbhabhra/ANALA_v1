@@ -71,14 +71,14 @@ body {
 /* Center-align the sections and adjust size */
 .hero, .services, .clients {
     text-align: center;
-    padding: 100px 0; /* Increase the padding to increase the height of these sections */
+    padding: 200px 0; /* Increase the padding to increase the height of these sections */
     width: 100%; /* Increase the width to 100% */
 }
 
 /* About Us & Contact Section */
 .about {
     text-align: center;
-    padding: 36px 0; /* Reduce the padding by 40% to decrease the height */
+    padding: 40px 0; /* Reduce the padding by 40% to decrease the height */
     width: 100%; /* Increase the width to 100% */
 }
 
