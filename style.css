@@ -26,7 +26,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font to the body */
     background-color: #f0f0f0;
     color: white; /* Set the default font color to white */
 }
@@ -38,10 +38,11 @@ body {
     justify-content: space-between;
     padding: 20px;
     background-color: var(--header-footer-color); /* Use the custom color */
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font to the header */
 }
 
 .header h1 {
-    font-size: 18px; /* Adjust the font size as needed */
+    font-size: 24px; /* Increase the font size for desktop */
     margin: 0;
     text-align: left;
 }
@@ -51,10 +52,28 @@ body {
     text-decoration: none;
     font-size: 16px;
     margin-right: 20px;
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font to links */
 }
 
 .header a:hover {
     text-decoration: underline;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack elements vertically for mobile */
+        text-align: center; /* Center-align text for mobile */
+    }
+
+    .header h1 {
+        font-size: 20px; /* Adjust the font size for mobile */
+    }
+
+    .header a {
+        font-size: 14px; /* Adjust the font size for mobile */
+        margin: 10px 0; /* Add spacing between links */
+    }
 }
 
 /* Navigation Styles */
@@ -89,7 +108,7 @@ body {
 }
 
 /* Section Text */
-.hero-text, .services-text, .clients-text, .about-text {
+.hero-text, .services-text, clients-text, .about-text {
     font-size: 18px;
     margin-bottom: 40px;
     color: white; /* Set the font color to white */
@@ -135,8 +154,6 @@ body {
     margin: 0;
     text-align: right; /* Align "Copyright" to the right */
 }
-
-
 
 /* Background Images for Sections */
 .hero {
