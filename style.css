@@ -120,13 +120,14 @@ body {
 .hero-title, .services-title, .clients-title, .about-title {
     font-size: 32px;
     margin-bottom: 20px;
+	color: #d90f39;
 }
 
 /* Section Text */
 .hero-text, .services-text, .clients-text, .about-text {
     font-size: 18px;
     margin-bottom: 40px;
-    color: white; /* Set the font color to white */
+    color: #e0db1e; 
 }
 
 /* CTA Button */
@@ -234,3 +235,5 @@ body {
 .full-screen .hero-title {
     font-size: 48px;
 }
+
+/* Add more styles for full-screen sections as needed */
