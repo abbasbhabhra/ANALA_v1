@@ -29,11 +29,15 @@ body {
     font-family: 'Playfair Display', serif; /* Apply Playfair Display font to the body */
     background-color: #f0f0f0;
     color: white; /* Set the default font color to white */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header Styles */
 .header {
     display: flex;
+    flex-wrap: wrap; /* Wrap elements to the next line if needed */
     align-items: center;
     justify-content: space-between;
     padding: 20px;
@@ -45,6 +49,12 @@ body {
     font-size: 24px; /* Increase the font size for desktop */
     margin: 0;
     text-align: left;
+    flex: 1; /* Expand to take available space */
+}
+
+.header .navbar {
+    flex: 1; /* Expand to take available space */
+    text-align: right; /* Align navigation to the right */
 }
 
 .header a {
@@ -68,6 +78,11 @@ body {
 
     .header h1 {
         font-size: 20px; /* Adjust the font size for mobile */
+    }
+
+    .header .navbar {
+        margin-top: 20px; /* Add spacing between header and navigation for mobile */
+        text-align: center; /* Center-align navigation for mobile */
     }
 
     .header a {
@@ -94,11 +109,13 @@ body {
     width: 100%; /* Increase the width to 100% */
 }
 
-/* About Us & Contact Section */
+/* Contact Us Section */
 .about {
     text-align: center;
-    padding: 40px 0; /* Reduce the padding by 40% to decrease the height */
-    width: 100%; /* Increase the width to 100% */
+    padding: 40px 0;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Section Titles */
@@ -131,28 +148,33 @@ body {
 
 /* Footer Styles */
 #footer {
-    background-color: var(--header-footer-color); /* Use the custom color */
+    background-color: var(--header-footer-color);
     color: white;
     text-align: center;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px 0;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+
+/* Add some space to separate the footer from the main content */
+#footer::before {
+    content: "";
+    height: 10px; /* Adjust the height as needed */
+    width: 100%;
+    display: block;
 }
 
 /* Footer Content */
 .footer-text {
-    flex: 2; /* Adjust the space allocation */
     text-align: left; /* Align "Made by" to the left */
     font-size: 10px; /* Reduce the font size for "Made by" */
+    margin: 0; /* Add margin to separate footer content */
 }
 
 /* Footer Text */
 .copyright {
-    flex: 2; /* Adjust the space allocation */
+    text-align: right; /* Align "Copyright" to the right */
     font-size: 10px; /* Reduce the font size for "Copyright" */
     margin: 0;
-    text-align: right; /* Align "Copyright" to the right */
 }
 
 /* Background Images for Sections */
